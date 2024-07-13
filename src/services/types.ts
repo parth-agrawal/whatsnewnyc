@@ -18,18 +18,17 @@ export type RequestBody = {
   }
   "response_type": object,
   "headless": boolean
-}
+};
 
 export const JobPosting = z.object({
   title: z.string().describe('The job title; for example, "software developer"'),
-  description: z.string().optional().describe('The job description'),
-  company: z.string().optional().describe('The company name'),
-  location: z.string().optional().describe('Where the job is located geographically'),
-  sourceUrl: z.string().optional().describe('The company website')
+  sourceUrl: z.string().optional().describe('The job posting URL')
 }).describe('A single job posting');
-export type JobPosting = z.infer<typeof JobPosting>
+// export type JobPosting = z.infer<typeof JobPosting>;
 
+// export const JobPostings = z.array(JobPosting).describe('A list of job postings.');
 export const JobPostings = z.object({
-  jobPostings: z.array(JobPosting)
+  jobPostings: z.array(z.string()).describe('A list of job titles.'),
+  pageUrl: z.string().describe('The URL the jobs were found on.')
 });
-export type JobPostings = z.infer<typeof JobPostings>
+export type JobPostings = z.infer<typeof JobPostings>;
