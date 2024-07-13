@@ -14,7 +14,7 @@ function App() {
           What's new in NYC?
         </div>
 
-        <Button className="w-fit">
+        <Button className="w-fit" onClick={() => { }}>
           Pull job postings
         </Button>
 
