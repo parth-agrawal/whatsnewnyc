@@ -1,8 +1,19 @@
+import { useState } from 'react'
 import './App.css'
 import { Display } from './components/Display'
 import { Button } from './components/ui/button'
+import { getJobPostings } from './services/getJobPostings'
 
 function App() {
+
+
+  const [data, setData] = useState<any>([])
+
+  const handleClick = async () => {
+    const response = getJobPostings()
+    console.log(response)
+  }
+
 
 
 
@@ -14,7 +25,7 @@ function App() {
           What's new in NYC?
         </div>
 
-        <Button className="w-fit" onClick={() => { }}>
+        <Button className="w-fit" onClick={handleClick}>
           Pull job postings
         </Button>
 
