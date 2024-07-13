@@ -60,10 +60,10 @@ export function Display() {
                 {jobPostings.map((posting) => (
                     <TableRow key={posting.id}>
                         <TableCell className="font-medium">{posting.title}</TableCell>
-                        <TableCell>{posting.description}</TableCell>
+                        <TableCell className="text-left">{posting.description}</TableCell>
                         <TableCell>{posting.company}</TableCell>
-                        <TableCell className="text-right">{posting.location}</TableCell>
-                        <TableCell className="text-right">{posting.sourceWebsite}</TableCell>
+                        <TableCell className="text-center">{posting.location}</TableCell>
+                        <TableCell className="text-left">{posting.sourceWebsite}</TableCell>
                     </TableRow>
                 ))}
             </TableBody>
