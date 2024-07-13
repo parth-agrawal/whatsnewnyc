@@ -1,0 +1,4 @@
+Using the current version of Nolita seems to necessitate using the new pages API. By recommendation of the developer, we downgraded to using npx nolita@2.0.1
+Unlike content generation, it seems that agentic web scraping is a VERY intensive process. I had to narrow the prompt down to something hella specific and upgrade to gpt-4 in order to simply get output.  
+Be careful with your prompts. Running without headless mode gives you a sense of its behavior; the word "apply" in my original prompt was making it overly eager to click on apply buttons and skip past pages that had the info it actually needed.  
+Subtle bugs - do not serialize and send a Zod schema. It does not serialize correctly. We used Also, do not omit Content-Type headers. It can make you think there's something wrong with your valid input.  
