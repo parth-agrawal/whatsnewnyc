@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Display } from './components/Display'
 import { Button } from './components/ui/button'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Button>
-        Test
-      </Button>
+      <div className="flex flex-col gap-4 justify-center items-center">
+
+        <div className="text-3xl">
+          What's new in NYC?
+        </div>
+
+        <Button className="w-fit">
+          Pull job postings
+        </Button>
+
+        <Display />
+      </div>
+
 
 
     </>

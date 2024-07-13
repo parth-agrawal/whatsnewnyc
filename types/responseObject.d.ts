@@ -1,9 +1,9 @@
-type ResponseTypes = {
+export type ResponseTypes = {
     jobPostings: JobPosting[]
 
 }
 
-type JobPosting = {
+export type JobPosting = {
     id: number,
     title: string,
     description: string,
