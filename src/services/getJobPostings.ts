@@ -7,6 +7,7 @@ dotenv.config();
 
 export const getJobPostings = async (): Promise<JobPosting> => {
   if (!process.env.PROVIDER_API_KEY || !process.env.HDR_API_KEY) throw new Error('API keys not set in .env');
+  // IDK if this is necessary, but I didn't like the floating $schema variable.  -- ssebexen
   const {$schema, ...jobPostingSchema} = zodToJsonSchema(JobPosting);
   const body: RequestBody = {
     browse_config: {
