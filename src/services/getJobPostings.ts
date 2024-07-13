@@ -1,5 +1,5 @@
 import '../../types/responseObject.d.ts';
-import { JobPostings, JobPosting, RequestBody } from './types.ts';
+import { JobPosting, RequestBody } from './types.ts';
 import {zodToJsonSchema} from 'zod-to-json-schema';
 import dotenv from 'dotenv';
 
@@ -13,7 +13,7 @@ export const getJobPostings = async (): Promise<JobPosting> => {
     browse_config: {
       startUrl: "https://www.builtinnyc.com/job/director-local-campaign-operations/270227",
       objective: [
-        "What is the name of the job I can apply for?"
+        "Get me a job title from this page. Optionally include any additional information about the jobs you can find, including the job description, company name, where the job is located, and a link to the job application page."
       ],
     maxIterations: 3
   },

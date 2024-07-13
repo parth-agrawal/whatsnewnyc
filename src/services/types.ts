@@ -21,12 +21,12 @@ export type RequestBody = {
 }
 
 export const JobPosting = z.object({
-  title: z.string().describe('The job title'),
+  title: z.string().describe('The job title; for example, "software developer"'),
   description: z.string().optional().describe('The job description'),
-  // company: z.string().optional().describe('The company name'),
-  // location: z.string().optional().describe('Where the job is located geographically'),
-  // sourceWebsite: z.string().optional().describe('The company website')
-});
+  company: z.string().optional().describe('The company name'),
+  location: z.string().optional().describe('Where the job is located geographically'),
+  sourceUrl: z.string().optional().describe('The company website')
+}).describe('A single job posting');
 export type JobPosting = z.infer<typeof JobPosting>
 
 export const JobPostings = z.object({
