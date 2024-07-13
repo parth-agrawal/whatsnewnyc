@@ -6,6 +6,16 @@ export type RequestBody = {
     objective: string[],
     maxIterations: number
   },
+  "provider_config": {
+    provider: string,
+    apiKey: string
+  },
+  "model_config": {
+    model: string
+  },
+  "hdr_config": {
+    apikey: string,
+  }
   "response_type": object,
   "headless": boolean
 }
